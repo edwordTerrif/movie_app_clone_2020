@@ -1,0 +1,123 @@
+.movies {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  transform-style: preserve-3d;
+}
+
+a {
+  text-decoration: none;
+  transform-style: preserve-3d;
+  transform: translateY(-100px);
+}
+
+.movies .movie {
+  position: relative;
+  height: 100%;
+  background: radial-gradient(#222, #0f0f0f);
+  padding: 30px 30px;
+  transition: 0.5s;
+}
+
+div .movie {
+  min-height: 690px;
+  cursor: pointer;
+}
+
+.front {
+  transform-style: preserve-3d;
+  margin-right: 50px;
+  /*animation: rotate 10s linear infinite;*/
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  100% {
+    transform: rotate3d(0, 1, 0, 360deg);
+  }
+}
+
+.block {
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.block::before {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 750px;
+  content: "";
+  font-size: 20px;
+  background: #111111;
+  transform: translate3d(274px, 0, -15px) rotateY(90deg);
+}
+
+.block::after {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 750px;
+  content: "";
+  font-size: 20px;
+  background: #111111;
+  transform: translate3d(-14px, -750px, -15px) rotateY(90deg);
+}
+
+div .movie::before {
+  transform-style: preserve-3d;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 285px;
+  height: 10px;
+  animation: light 5s infinite;
+  transform-origin: center bottom;
+  transform: translate3d(4px, -5px, -5px) rotateX(90deg);
+  z-index: -1;
+}
+
+@keyframes light {
+  0% {
+    background: #fff;
+    filter: blur(20px);
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 80px #fff, 0 0 120px #fff;
+  }
+  100%,
+  25% {
+    background: #fff;
+    filter: blur(20px);
+    box-shadow: 0 0 10px #fff, 0 0 80px #fff, 0 0 160px #fff, 0 0 200px #fff;
+  }
+  0% {
+    background: #fff;
+    filter: blur(20px);
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 80px #fff, 0 0 120px #fff;
+  }
+}
+
+.movie_data {
+  text-shadow: 0 0 1px #fff;
+}
+
+.movies {
+  transform: translateX(700px);
+}
+
+/*
+  .movies .block:nth-child(1) {
+    transform: rotateY(0deg);
+  }
+  
+  .movies .block:nth-child(1) ~ .block {
+    transform: rotateY(-30deg);
+  }
+  */

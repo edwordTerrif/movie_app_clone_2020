@@ -1,0 +1,35 @@
+body {
+  overflow: visible;
+}
+
+.poster {
+  position: absolute;
+  height: 420px;
+  top: 20%;
+  right: 60%;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.background {
+  width: 1903px;
+  height: 800px;
+}
+
+.title {
+  position: absolute;
+  top: 20%;
+  right: 30%;
+}
+
+.year {
+  position: absolute;
+  top: 25%;
+  right: 30%;
+}
+
+.genre {
+  position: absolute;
+  margin-left: 5px;
+  top: 50%;
+}
