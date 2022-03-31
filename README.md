@@ -1,4 +1,4 @@
 # Movie App Clone 2020
 
 React JS Fundamentals (2020 Update!)
-my file is break in node_modul (no APT is dead :( )
+my file is break in node_modul (no API is dead :( )
